@@ -1,0 +1,19 @@
+web:
+ build: ./flask_app
+ command: python -u app.py
+ ports:
+   - "5000:5000"
+ volumes:
+   - ./flask_app:/app
+ links:
+   - mongodb
+
+mongodb:
+ image: mongo:3.2
+ hostname: users_mongodb
+ environment:
+  - MONGO_INITDB_DATABASE=users_db
+  - MONGO_INITDB_ROOT_USERNAME=admin
+  - MONGO_INITDB_ROOT_PASSWORD=1kr45!5hrtl
+ ports:
+  - 27017:27017 
