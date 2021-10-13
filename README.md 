@@ -1,20 +1,20 @@
 strat app : docker-compose up
 
-endpoin:
+endpoint:
 #get user 
 method: GET
-url: http://172.17.0.3:5000/api/v1/user/<user_id>
+url: /api/v1/user/<user_id>
 ContentType: application/json
 
 #get all user 
 method: GET
-url: http://172.17.0.3:5000/api/v1/user/all
+url: /api/v1/user/all
 ContentType: application/json
 
 
 #create user 
 method: POST
-url: http://172.17.0.3:5000/api/v1/user
+url: /api/v1/user
 ContentType: application/json
 data: {"user":{
             "user_id": number,
@@ -26,12 +26,12 @@ data: {"user":{
 
 #delete user 
 method: DELETE
-url: http://172.17.0.3:5000/api/v1/user/<user_id>
+url: /api/v1/user/<user_id>
 ContentType: application/json
 
 #update user 
 method: PUT
-url: http://172.17.0.3:5000/api/v1/user/<user_id>
+url: /api/v1/user/<user_id>
 ContentType: application/json
 data: {"user":{
             "user_id": number,
